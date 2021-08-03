@@ -44,7 +44,6 @@ class EmailAuth(models.Model):
             send_mail(
                 SUBJECT, message, from_email=None, recipient_list=[self.email]
             )
+            super().save(*args, **kwargs)
         except SMTPException:
-            return None
-
-        super().save(*args, **kwargs)
+            pass
