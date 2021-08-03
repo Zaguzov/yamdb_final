@@ -21,7 +21,7 @@ jobs:
     - name: Test with flake8 and django tests
       run: |
         python -m flake8
-	pytest
+        pytest
 
   build_and_push_to_docker_hub:
       name: Push Docker image to Docker Hub
@@ -56,7 +56,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           stack_file_name: docker-compose.yaml
           script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/ ${{ secrets.DOCKER_REPOSITORY }}
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env 
