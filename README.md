@@ -1,7 +1,7 @@
 # yamdb_final
 yamdb_final
 
-http://84.201.142.253/api/v1/ - ссылка на развёрнутый проект 
+http://84.201.142.253/redoc/ - ссылка на развёрнутый проект 
 
 API для сервиса **YaMDb**, основанный на Django REST Framework. 
  
